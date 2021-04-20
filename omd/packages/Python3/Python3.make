@@ -55,10 +55,10 @@ $(PYTHON3_CACHE_PKG_PROCESS): $(PYTHON3_CACHE_PKG_PATH)
 	done
 # Native modules built based on this version need to use the correct rpath
 	sed -i 's|--rpath,/omd/versions/[^/]*/lib|--rpath,$(OMD_ROOT)/lib|g' \
-	    $(PACKAGE_PYTHON3_PYTHONPATH)/_sysconfigdata__linux_x86_64-linux-gnu.py
+	    $(PACKAGE_PYTHON3_PYTHONPATH)/_sysconfigdata__linux_powerpc64le-linux-gnu.py
 	LD_LIBRARY_PATH="$(PACKAGE_PYTHON3_LD_LIBRARY_PATH)" \
 	    $(PACKAGE_PYTHON3_EXECUTABLE) -m py_compile \
-	    $(PACKAGE_PYTHON3_PYTHONPATH)/_sysconfigdata__linux_x86_64-linux-gnu.py
+	    $(PACKAGE_PYTHON3_PYTHONPATH)/_sysconfigdata__linux_powerpc64le-linux-gnu.py
 	rm -r $(PACKAGE_PYTHON3_PYTHONPATH)/test
 	$(TOUCH) $@
 
