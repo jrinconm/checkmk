@@ -17,6 +17,7 @@ PACKAGE_FREETDS_LDFLAGS := -L$(PACKAGE_FREETDS_DESTDIR)/lib
 
 $(FREETDS_BUILD): $(FREETDS_UNPACK)
 	cd $(FREETDS_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/freetds/config* . && \
 	    ./configure \
 		--enable-msdblib \
 		--prefix="" \

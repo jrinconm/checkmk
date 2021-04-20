@@ -43,6 +43,7 @@ $(RRDTOOL_CONFIGURE): $(RRDTOOL_PATCHING)
 	export LDFLAGS="$(shell pkg-config --libs gthread-2.0) -lglib-2.0 $(PACKAGE_PYTHON3_LDFLAGS)" ; \
 	export CPPFLAGS="$(shell pkg-config --cflags gthread-2.0) -I$(PACKAGE_PYTHON3_INCLUDE_PATH)" ; \
 	cd $(RRDTOOL_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/config* ./conftools/ && \
         ./configure $(RRDTOOL_CONFIGUREOPTS)
 	$(TOUCH) $@
 

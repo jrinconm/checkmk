@@ -34,7 +34,9 @@ PNP4NAGIOS_CONFIGUREOPTS = \
     --with-base-url='/\#\#\#SITE\#\#\#/pnp4nagios'
 
 $(PNP4NAGIOS_BUILD): $(PNP4NAGIOS_PATCHING)
-	cd $(PNP4NAGIOS_BUILD_DIR) ; ./configure $(PNP4NAGIOS_CONFIGUREOPTS)
+	cd $(PNP4NAGIOS_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/config* . && \
+	./configure $(PNP4NAGIOS_CONFIGUREOPTS)
 	$(MAKE) -C $(PNP4NAGIOS_BUILD_DIR) all
 	$(TOUCH) $@
 

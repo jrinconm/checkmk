@@ -11,7 +11,9 @@ NSCA_BUILD_DIR := $(PACKAGE_BUILD_DIR)/$(NSCA_DIR)
 #NSCA_WORK_DIR := $(PACKAGE_WORK_DIR)/$(NSCA_DIR)
 
 $(NSCA_BUILD): $(NSCA_PATCHING)
-	cd $(NSCA_BUILD_DIR) ; ./configure
+	cd $(NSCA_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/config* . && \
+	./configure
 	$(MAKE) -C $(NSCA_BUILD_DIR) all
 	$(TOUCH) $@
 

@@ -24,7 +24,9 @@ NAGIOS_CONFIGUREOPTS := \
 
 $(NAGIOS_BUILD): $(NAGIOS_PATCHING)
 	find $(NAGIOS_BUILD_DIR)/ -name \*.orig -exec rm {} \;
-	cd $(NAGIOS_BUILD_DIR) ; ./configure $(NAGIOS_CONFIGUREOPTS)
+	cd $(NAGIOS_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/config* . && \
+	./configure $(NAGIOS_CONFIGUREOPTS)
 	$(MAKE) -C $(NAGIOS_BUILD_DIR) all
 	$(TOUCH) $@
 

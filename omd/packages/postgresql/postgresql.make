@@ -19,7 +19,9 @@ PACKAGE_POSTGRESQL_INCLUDE_PATH := $(PACKAGE_POSTGRESQL_DESTDIR)/include
 
 ifneq ($(filter $(DISTRO_CODE),el6),)
 $(POSTGRESQL_BUILD): $(POSTGRESQL_UNPACK)
-	cd $(POSTGRESQL_BUILD_DIR) && ./configure \
+	cd $(POSTGRESQL_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/config* ./config/ && \
+	./configure \
 	    --prefix=""
 
 	$(MAKE) -C $(POSTGRESQL_BUILD_DIR)

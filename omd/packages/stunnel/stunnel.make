@@ -13,6 +13,7 @@ STUNNEL_BUILD_DIR := $(PACKAGE_BUILD_DIR)/$(STUNNEL_DIR)
 
 $(STUNNEL_BUILD): $(STUNNEL_UNPACK)
 	cd $(STUNNEL_BUILD_DIR) && \
+	cp $(PACKAGE_BASE)/config* ./auto/ && \
 	    ./configure \
 		--prefix=$(OMD_ROOT)
 	$(MAKE) -C $(STUNNEL_BUILD_DIR) -j4
