@@ -1,3 +1,7 @@
+# Modificación de check mk para compilar en power 9
+## Se cambia arquitectura a fuego de x86 a powerpc (a fuego tb)
+## Se debe cambiar algun config.guess desactualizado
+
 # Checkmk - Your complete IT monitoring solution
 
 Checkmk is available in several editions. The Checkmk Raw Edition is free and
