@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Download</title>
+ </head>
+ <body>
+	<h1>Source Download</h1>
+
+	<p>
+		All our <a href="https://dev.entrouvert.org/releases/lasso/">releases</a>
+		are available through HTTPs. The latest is the 2.6.1.
+	</p>
+
+	<h1>Binary Downloads</h1>
+
+	<h2>Debian Packages</h2>
+
+	<p>
+	  Debian packages are available in the official Debian distribution.
+	</p>
+	 
+	<p>
+		Additionnaly there are <i>stretch</i> and <i>jessie</i> packages and there may be more
+	  up-to-date packages available in our local apt repository.  Pick the
+	  one appropriate for your distribution:
+	</p>
+
+	<h3>Stretch</h3>
+	<pre>
+	deb http://deb.entrouvert.org stretch main
+	</pre>
+
+	<h3>Jessie</h3>
+	<pre>
+	deb http://deb.entrouvert.org jessie main
+	</pre>
+
+
+	<p>Look on <a href="http://deb.entrouvert.org">deb.entrouvert.org</a> to get the GPG key of our repository</p>
+
+	<p>
+	  Available packages are&nbsp;:
+	</p>
+
+	<ul>
+	 <li>liblasso3: runtime library</li>
+	 <li>liblasso3-dev: C development kit</li>
+	 <li>python-lasso: Python 2.5 &amp; 2.6 bindings</li>
+	 <li>php5-lasso: PHP bindings</li>
+	 <li>liblasso-java: JAVA bindings</li>
+	 <li>liblasso-perl: Perl bindings</li>
+	</ul>
+
+
+	<h1>Git</h1>
+
+	<p>To checkout the repository do&nbsp;:</p>
+
+	<pre>git clone https://repos.entrouvert.org/lasso.git</pre>
+
+	<p>You can also <a href="https://repos.entrouvert.org/lasso.git/">browse</a> using CGit.</p>
+
+ </body>
+</html>
+

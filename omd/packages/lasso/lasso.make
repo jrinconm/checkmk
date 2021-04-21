@@ -20,6 +20,7 @@ $(LASSO)-int: $(LASSO_INTERMEDIATE_INSTALL)
 ifeq ($(filter $(DISTRO_CODE),sles15 sles12sp3 sles12sp4),)
 $(LASSO_BUILD): $(LASSO_UNPACK)
 	cd $(LASSO_BUILD_DIR) \
+	&& sed -i s/'EXTRA_DIST +='/'EXTRA_DIST ='/g docs/reference/lasso/Makefile.am \
 	&& echo $(LASSO_VERS) > .tarball-version \
 	&& ./autogen.sh noconfig \
         && ./configure --prefix=$(OMD_ROOT) --disable-gtk-doc --enable-static-linking \

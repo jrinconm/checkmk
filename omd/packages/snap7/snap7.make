@@ -15,6 +15,7 @@ SNAP7_BUILD_DIR := $(PACKAGE_BUILD_DIR)/$(SNAP7_DIR)
 .PHONY: $(SNAP7)-repackage
 
 $(SNAP7_BUILD): $(SNAP7_UNPACK)
+	cp $(PACKAGE_BASE)/snap7/ppc64le_linux.mk $(SNAP7_BUILD_DIR)/build/unix
 	$(MAKE) -C $(SNAP7_BUILD_DIR)/build/unix -f $(SNAP7_ARCH)_linux.mk
 	$(TOUCH) $@
 
