@@ -36,10 +36,10 @@
 // files during the build procedure of other editions.
 // Note: In case you add something here, you will have to add some dummy files
 // to buildscripts/scripts/lib/versioning.groovy (see patch_themes())
-@import "../facelift/scss/cee/_graphs_cee.scss";
-@import "../facelift/scss/cee/_reporting.scss";
-@import "../facelift/scss/cee/_ntop.scss";
-@import "../facelift/scss/cee/_license_usage.scss";
+//@import "../facelift/scss/cee/_graphs_cee.scss";
+//@import "../facelift/scss/cee/_reporting.scss";
+//@import "../facelift/scss/cee/_ntop.scss";
+//@import "../facelift/scss/cee/_license_usage.scss";
 @if $ENTERPRISE == "yes" {
   @include graphs_cee;
   @include reporting;
@@ -49,7 +49,7 @@
 
 // Note: In case you add something here, you will have to add some dummy files
 // to buildscripts/scripts/lib/versioning.groovy (see patch_themes())
-@import "../facelift/scss/cme/_managed.scss";
+//@import "../facelift/scss/cme/_managed.scss";
 @if $MANAGED == "yes" {
   @include managed;
 }
